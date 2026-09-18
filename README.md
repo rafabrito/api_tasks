@@ -1,6 +1,6 @@
-# API Tasks UNMEP
+# API Task
 
-A **API Tasks UNMEP** é uma API REST desenvolvida em **PHP puro** com o objetivo de gerenciar uma lista de tarefas, permitindo as operações básicas de **CRUD** (Create, Read, Update, Delete). Cada tarefa possui os seguintes campos:
+A **API Tasks** é uma API REST desenvolvida em **PHP puro** com o objetivo de gerenciar uma lista de tarefas, permitindo as operações básicas de **CRUD** (Create, Read, Update, Delete). Cada tarefa possui os seguintes campos:
 
 | Campo | Tipo | Descrição |
 |---|---|---|
@@ -37,7 +37,7 @@ composer update
 
 ### 1. Criar o banco de dados
 
-Importe o arquivo SQL localizado em [`database/api_task_unmep_database.sql`](database/api_task_unmep_database.sql) no seu MySQL local (via phpMyAdmin ou terminal). Esse script irá:
+Importe o arquivo SQL localizado em [`database/api_task_database.sql`](database/api_task_database.sql) no seu MySQL local (via phpMyAdmin ou terminal). Esse script irá:
 
 - Criar a tabela `task` com todos os seus campos e índices
 - Popular a tabela com **4 tarefas fictícias** para testes imediatos
@@ -71,14 +71,14 @@ DB_CHARSET=utf8
 Com o XAMPP ou WampServer em execução, coloque o projeto dentro da pasta `htdocs/` (XAMPP) ou `www/` (WampServer) e acesse via navegador:
 
 ```
-http://localhost/api_tasks_unmep/api/
+http://localhost/api_tasks/api/
 ```
 
 ---
 
-## Arquivo SQL — `database/api_task_unmep_database.sql`
+## Arquivo SQL — `database/api_task_database.sql`
 
-O arquivo [`database/api_task_unmep_database.sql`](database/api_task_unmep_database.sql) é um dump gerado pelo **phpMyAdmin** e contém:
+O arquivo [`database/api_task_database.sql`](database/api_task_database.sql) é um dump gerado pelo **phpMyAdmin** e contém:
 
 1. **Criação da tabela `task`** com a seguinte estrutura:
 
@@ -104,7 +104,7 @@ CREATE TABLE `task` (
 ## Estrutura do Projeto
 
 ```
-api_tasks_unmep
+api_tasks
 ├── api
 │   ├── core
 │   │   ├── class
@@ -120,7 +120,7 @@ api_tasks_unmep
 │   ├── .gitignore                  # Lista de arquivos ignorados pelo git  
 │   └── index.php                   # Ponto de entrada da aplicação
 └── database
-    └── api_task_unmep_database.sql # Script SQL com estrutura e dados iniciais da tabela task
+    └── api_task_database.sql # Script SQL com estrutura e dados iniciais da tabela task
 ```
 
 ---
